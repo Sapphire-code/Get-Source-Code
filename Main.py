@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-import pyperclip
 import sys
 import os
 import time
