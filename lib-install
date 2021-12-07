@@ -1,0 +1,3 @@
+import os
+import sys
+os.system("pip install beautifulsoup4")
