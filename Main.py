@@ -3,8 +3,6 @@ import requests
 import sys
 import os
 import time
-import keyboard
-keyboard.press_and_release('f11, shift')
 def getsource():
                 geta = input("Enter website url: ")
                 print("Your Websites source code")
