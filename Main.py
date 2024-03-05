@@ -3,12 +3,12 @@ import requests
 import sys
 import os
 import time
-def getsource():
-                geta = input("Enter website url: ")
+def main():
+                websiteUrl = input("Enter website url: ")
                 print("Your Websites source code")
                 print("==========================================================================")
-                getb = requests.get(geta)
-                soup = BeautifulSoup(getb.text, 'lxml')
+                getWebsiteUrl = requests.get(websiteUrl)
+                soup = BeautifulSoup(getWebsiteUrl.text, 'lxml')
                 ask = input("""
 		Do you want to print the source code in the console or 
                 do you want to save it to an html file?(press y for printing to console
@@ -16,10 +16,11 @@ def getsource():
                 if ask == "y":
                     print(soup.prettify())
                 else:
-                    vara = soup.prettify()
-                    f = open('geta.html', "w")
-                    f.write(vara)
+                    prettyCode = soup.prettify()
+                    f = open('websiteUrl.html', "w")
+                    f.write(prettyCode)
                     f.close()
 
 
-getsource()
+if __name__ == "__main__":
+    main()
